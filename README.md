@@ -13,4 +13,4 @@ This is a simple React application in which the user can interactively play a ga
 
 ### Deploy:
 
-**`Deployed here:`** https://route-creator-2022.herokuapp.com/
+**`Deployed here:`** https://paper-rock-scissors-sms.herokuapp.com/
