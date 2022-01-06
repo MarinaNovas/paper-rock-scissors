@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+   box-sizing: border-box;
+}
+
+:root {
+   --background-color: #96ceb4;
+   --rock-color: #4a4372;
+   --paper-color: #e41749;
+   --scissors-color: #dec410;
+   --title-color: #0b5e38;
+   --wins-color: #b11a21;
+   --losses-color: #204969;
+   --draw-color: #000000;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   font-family: "Roboto", sans-serif;
+}
+
+#root {
+   min-height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--background-color);
+}
+
+h2 {
+   color: var(--title-color);
+   font-size: 45px;
+}
+.app {
+   width: 950px;
+}
+
+.info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.wins-losses {
+   width: 450px;
+   display: flex;
+   justify-content: space-between;
+
+   font-size: 35px;
+   font-weight: 500;
+}
+
+.wins {
+   display: flex;
+   align-items: center;
+}
+
+.wins .number {
+   color: var(--wins-color);
+}
+
+.losses {
+   display: flex;
+   align-items: center;
+}
+
+.losses .number {
+   color: var(--losses-color);
+}
+
+.number {
+   font-size: 90px;
+   font-weight: 700;
+   display: block;
+   margin-right: 10px;
+}
+
+.text {
+   color: var(--title-color);
+}
+
+.choices {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 30px 0;
+   text-align: center;
+   align-items: center;
+   color: #ffffff9c;
+   font-size: 40px;
+}
+
+.choices button {
+   display: block;
+   margin: 0 auto;
+   width: 120px;
+   height: 120px;
+   border: none;
+   border-radius: 50%;
+   margin-bottom: 20px;
+   transition: 0.1s ease all;
+   box-shadow: 10px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.choices button:not(.computer-choice):hover {
+   transform: scale(1.1);
+}
+
+button svg {
+   width: 70px;
+}
+
+.rock {
+   background-color: var(--rock-color);
+}
+
+.paper {
+   background-color: var(--paper-color);
+}
+
+.scissors {
+   background-color: var(--scissors-color);
+}
+.computer-choice {
+   background-color: #000000;
+}
+
+.computer-choice svg {
+   width: 50px;
+}
+
+.vs {
+   font-size: 130px;
+   transform: rotate(-45deg);
+   color: #0b5e396e;
+}
+
+.game-state {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #00000094;
+   z-index: 100;
+}
+
+.game-state-form {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 100;
+   width: 450px;
+   padding: 40px 20px;
+   background-color: var(--draw-color);
+   border-radius: 15px;
+   color: #ffffff;
+   font-size: 50px;
+
+   text-align: center;
+}
+
+.game-state-form button {
+   border: none;
+   width: 260px;
+   height: 70px;
+   border-radius: 13px;
+   background-color: #FF717E;
+   color: #ffffff;
+   font-size: 30px;
+}
+
+.game-state-content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   min-height: 100%;
+   margin-bottom: 30px;
+}
+
+.game-state-content span {
+   text-align: center;
+}
+
+.game-state-content svg {
+   width: 120px;
+}
+
+.game-state-content svg path {
+   fill: #ffffff7e;
+}
+
+.won {
+   background-color: var(--wins-color);
+}
+
+.lost {
+   background-color: var(--losses-color);
+}
+
+.drew {
+   background-color: var(--draw-color);
+}
